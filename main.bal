@@ -1,6 +1,6 @@
 import ballerina/http;
 
-service /rates on new http:Listener(8090) {
+service /rates on new http:Listener(9090) {
     resource function get getUsdToLkr() returns string|error {
         http:Client sampathExchangesRatesClient = check new("https://www.sampath.lk/");
         json reponse = check sampathExchangesRatesClient->get("/api/exchange-rates");
