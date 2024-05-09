@@ -1,0 +1,8 @@
+[package]
+org = "chameerar"
+name = "usd_to_lkr_rate_check"
+version = "0.1.0"
+distribution = "2201.8.4"
+
+[build-options]
+observabilityIncluded = true
