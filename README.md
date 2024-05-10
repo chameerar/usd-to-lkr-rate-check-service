@@ -10,7 +10,7 @@ bal run
 ```
 
 ## How to get the rate
-Send a GET request to `localhost:8090/rates/getUsdToLkr` to get the current rate.
+Send a GET request to `localhost:9090/rates/getUsdToLkr` to get the current rate.
 
 ```bash
 curl localhost:8090/rates/getUsdToLkr
