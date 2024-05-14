@@ -1,4 +1,5 @@
 import ballerina/http;
+import ballerina/log;
 
 service /rates on new http:Listener(9090) {
     resource function get getUsdToLkr() returns string|error {
@@ -14,7 +15,9 @@ service /rates on new http:Listener(9090) {
             }
         }
         else {
-            return data.toString();
+            error err = data;
+            log:printError("Error occurred: " + err.message());
+            return "Error occurred fetching data from Sampath API";
         }
         return "USD not found";
     }
